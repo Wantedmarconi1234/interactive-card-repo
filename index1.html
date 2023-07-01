@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:wght@400;700;800&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Interactive Card</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="upper-container">
+            <div class="back-container">
+                <img src="./images/bg-card-back.png" alt="">
+            </div>
+            <div class="front-container">
+                <img src="./images/bg-card-front.png" alt="">
+                <div class="top-left-1"></div>
+                <div class="top-left-2"></div>
+                <div class="center-text"><span id="holder-number-output">0000 0000 0000 0000</span></div>
+                <div class="bottom-left"><span id="holder-name-output">Jane Appleseed</span></div>
+                <div class="bottom-right"><span id="date-output-month">00</span></div>
+                <div class="bottom-right"><span id="date-break">/</span></div>
+                <div class="bottom-right"><span id="date-output-year">00</span></div>
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="#" id="form-info">
+                <div class="name-group">
+                    <label for="name-input">cardholder name</label>
+                    <input type="text" id="name-input" placeholder="e.g Jane Appleseed">
+                    <span id="name-error" class="error"></span>
+                </div>
+                <div class="number-group">
+                    <label for="number-input">card number</label>
+                    <input type="text" id="number-input" placeholder="e.g. 1234 5678 9123 0000">
+                    <span id="number-error" class="error"></span>
+                </div>
+                <div class="date-cvs-labels">
+                    <label for="#">Exp. Date (MM/YY)</label>
+                    <label for="#" id="cvc">CVC</label>
+                </div>
+                <div class="date-container">
+                    <div class="date-group">
+                        <div class="date-input">                            
+                            <div class="month-group">
+                                <input type="number" id="dateInput-month" placeholder="MM">
+                                <span id="month-error" class="error"></span>
+                            </div>
+                            <div class="year-group">
+                                <input type="number" id="dateInput-year" placeholder="YY">
+                                <span id="year-error" class="error"></span>
+                            </div>
+                            <div class="cvc-group">
+                                <input type="text" id="cvcInput" placeholder="e.g. 123">
+                                <span id="cvc-error" class="error"></span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="submit"><button>Confirm</button></div>
+            </form>
+            <form class="complete">
+                <svg width="80" height="80" fill="none" ><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+                <h3>THANK YOU!</h1>
+                <p class="complete-msg">We've added your card details</p>
+                <button class="continue" type="reset">Continue</button>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
